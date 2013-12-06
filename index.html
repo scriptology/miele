@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Miele 01</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"> 
+<script type="text/javascript" src="js/tap.js"></script>
+
+<script src="js/heartcode-canvasloader-min.js"></script>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/threesixty.js"></script>
+<script src="js/jgestures.min.js"></script>
+
+<link rel="stylesheet" href="css/reset.css" media="screen" type="text/css" />    
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/threesixty.css" media="screen" type="text/css" />
+
+<style type="text/css" media="screen">
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+</style> 
+   
+	<script type="text/javascript">
+
+		/* ready function */
+		document.addEventListener('DOMContentLoaded',function(){
+
+			// get #b-info
+			window.bInfo = document.getElementById('b-info');
+			// get all .btn-open-close
+			var btnsArray = document.getElementsByClassName('btn-open-close');
+			var btnsArrayLength = btnsArray.length;
+
+			// set event listeners
+			var index;
+			for (index = 0; index < btnsArrayLength; ++index) {
+				var myTap = new Tap(btnsArray[index]);
+				btnsArray[index].addEventListener('tap', tapDidOccur, false);
+			}
+
+		});
+
+
+		function tapDidOccur (e) {
+			//your code
+			// .btn-open-close
+			toggleClass(this, "btn-rotated");
+			// .b-info
+			toggleClass(bInfo, "b-info-opened");
+
+		}
+
+		function hasClass(el, cls) {
+			return el.classList.contains(cls);
+		}
+		function addClass(el, cls) {
+			el.classList.add(cls);
+		}
+		function removeClass(el, cls) {
+			el.classList.remove(cls);
+		}
+		function toggleClass(el, cls) {
+			el.classList.toggle(cls);
+		}
+	</script>
+    <script type="text/javascript">
+        window.listItems = new Array;
+        $(document).ready(function() {
+            listItems = $(".mrk");
+            listItems.each(function() {
+                if($(this).hasClass(localStorage["strg_mark"])) {
+                    $(this).css({'display':'block'});
+                }
+            });
+
+            $('.button_test').on('click', function() {
+                localStorage.clear();
+                localStorage["strg_mark"] = $(this).attr('rel');
+                console.log($(this).attr('rel'));
+            });
+            //console.log('----------');
+            //console.log(localStorage["strg_mark"]);
+        });
+    </script>
+
+</head>
+<body>
+<div class="page">
+    <div class="title"></div>
+
+    <div class="wrap_markdesc">
+        <div class="mrk marker1 group1">
+            <div class="cont">
+                <div class="mark"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        <div class="mrk marker2 group1">
+            <div class="cont">
+                <div class="mark"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        <div class="mrk marker3 group2">
+            <div class="cont">
+                <div class="mark"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        <!--
+        <div class="mrk marker4 group2">
+            <div class="cont">
+                <div class="mark pl_audio"></div>
+                <div class="text st_audio"></div>
+            </div>
+        </div>
+        -->
+        <div class="mrk marker5 group1">
+            <div class="cont">
+                <div class="mark"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+        <div class="mrk marker6 group2">
+            <div class="cont">
+                <div class="mark"></div>
+                <div class="text"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="threesixty">
+		<div id="spinner">
+			<span>0%</span>
+		</div>
+		<ol id="threesixty_images" class=""></ol>
+        <div class="arow360"></div>
+	</div>
+
+
+    <div class="control_wrap">
+        <a href="http://miele.ru/ex/microsite/ru/S8/index.html" target="_blank" class="more"></a>
+    </div>
+    <a href="http://miele.ru/ex/microsite/ru/S8/index.html" target="_blank" class="footer_link"></a> 
+</div>
+<script type="text/javascript">
+    window.listItems = new Array;
+    $(document).ready(function() {
+        listItems = $(".mrk");
+        listItems.each(function() {
+            if($(this).hasClass(localStorage["strg_mark"])) {
+                $(this).find('.text').css({'display':'block'});
+            }
+        });
+        //console.log('----------');
+        //console.log(localStorage["strg_mark"]);
+    });
+</script>
+</body>
+</html>

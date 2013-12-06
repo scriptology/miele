@@ -1,0 +1,261 @@
+body {
+	margin:0; 
+	padding:0;
+	font-size:12px;
+	line-height:14px;
+	}
+.page {
+	position:relative;
+	overflow:hidden;
+	margin:0; 
+	padding:0;
+	width:768px;
+	height:1024px;
+	background:url("../img/bg_miele.jpg") no-repeat 0 0;
+    background-size: 768px 1024px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .page {background-image:url("../img/bg_miele@2x.jpg");}
+}
+
+.page .title {
+    width: 595px;
+    height: 67px;
+    position: absolute;
+    top: 68px;
+    left: 91px;
+    background: url("../img/title.png") no-repeat 0 0;
+    background-size: 595px 67px;
+    z-index: 600;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .page .title { background-image:url("../img/title@2x.png");}
+}
+
+.control_wrap {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 130px;
+    z-index: 400;
+}
+.control_wrap .more {
+    display: inline-block;
+    margin: 0 auto;
+    width: 534px;
+    height: 114px;
+    background: url("../img/more.png") no-repeat 0 0;
+    background-size: 534px 114px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .control_wrap .more {background-image:url("../img/more@2x.png");}
+}
+.color_control {
+    position: relative;
+    width: 234px;
+    height: 234px;
+    display: inline-block;
+    margin: 0 auto;
+}
+.color_control .pallet {
+    position: absolute;
+    background: url("../img/color_control.png") no-repeat 0 0; 
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    top: 98px;
+    left: 98px;
+    opacity: 0;
+    z-index: 100;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .color_control .pallet {background-image:url("../img/color_control@2x.png");}
+}
+
+#player {
+    position: absolute; 
+}
+
+/* desc */
+
+.wrap_markdesc .cont .text {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -10px;
+    margin-right: -10px;
+    -webkit-transition: 0.5s;
+    z-index: 500;
+    /*pointer-events: none;*/
+}
+.wrap_markdesc .active .text {
+    display: block;
+    opacity: 1;
+}
+.mark {
+    width: 50px;
+    height: 50px;
+    background: url("../img/marker.png");
+    background-size: 50px 50px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .mark {background-image:url("../img/marker@2x.png");}
+}
+
+.group2 {
+    display: none;
+}
+.marker1 {
+    position: absolute;
+    top: 600px;
+    z-index: 600;
+    cursor: pointer;
+    left: 360px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+.marker1 .text {
+    width: 255px;
+    height: 158px;
+    background: url("../img/text/marker1.jpg") no-repeat 0 0;
+    background-size: 255px 158px;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker1 .text {background-image:url("../img/text/marker1@2x.jpg");}
+}
+.marker2 {
+    position: absolute;
+    top: 450px;
+    z-index: 600;
+    left: 280px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+}
+.marker2 .text {
+    width: 270px;
+    height: 164px;
+    background: url("../img/text/marker2.jpg") no-repeat 0 0;
+    background-size: 270px 164px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker2 .text {background-image:url("../img/text/marker2@2x.jpg");}
+}
+.marker3 {
+    position: absolute;
+    top: 680px;
+    z-index: 600;
+    left: 240px;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+}
+.marker3 .text {
+    width: 270px;
+    height: 139px;
+    background: url("../img/text/marker3.jpg") no-repeat 0 0;
+    background-size: 270px 139px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker3 .text {background-image:url("../img/text/marker3@2x.jpg");}
+}
+.marker4 {
+    position: absolute;
+    top: 550px;
+    z-index: 600;
+    left: 260px;
+    cursor: pointer;
+}
+.marker4 .text {
+    width: 270px;
+    height: 164px;
+    background: url("../img/text/marker4.jpg") no-repeat 0 0;
+    background-size: 270px 164px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker4 .text {background-image:url("../img/text/marker4@2x.jpg");}
+}
+.marker5 {
+    position: absolute;
+    top: 260px;
+    z-index: 600;
+    left: 360px;
+    cursor: pointer;
+}
+.marker5 .text {
+    width: 255px;
+    height: 126px;
+    background: url("../img/text/marker5.jpg") no-repeat 0 0;
+    background-size: 255px 126px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker5 .text {background-image:url("../img/text/marker5@2x.jpg");}
+}
+.marker6 {
+    position: absolute;
+    top: 540px;
+    z-index: 600;
+    left: 420px;
+    cursor: pointer;
+}
+
+.marker6 .text {
+    width: 255px;
+    height: 177px;
+    background: url("../img/text/marker6.jpg") no-repeat 0 0;
+    background-size: 255px 177px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .marker6 .text {background-image:url("../img/text/marker6@2x.jpg");}
+}
+
+
+.footer_link {
+    position: absolute;
+    bottom: 30px;
+    width: 180px;
+    height: 60px;
+    right: 10px;
+}
+.wrap_markdesc .cont {
+    position: relative;
+}
+.wrap_markdesc .cont:hover {
+ 
+}
+.wrap_markdesc .mrk {
+    -webkit-transition: 0.5s;
+}
+
+.test_mask {
+    position: relative !important;
+}
+.arow360 {
+    position: absolute;
+    top: 480px;
+    z-index: 350;
+    width: 61px;
+    height: 30px;
+    background: url("../img/arow360.png") no-repeat;
+    background-size: 61px 30px;
+    left: 50%;
+    margin-left: -30px;
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .arow360 {background-image:url("../img/arow360@2x.png");}
+}
